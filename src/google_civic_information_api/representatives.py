@@ -51,6 +51,6 @@ def representative_info_by_division(api_key, ocd_id, recursive=True, levels=None
     elif roles and roles not in VALID_ROLES:
         raise ValueError(f"roles must be one of {VALID_ROLES}")
 
-    api_response = requests.get(f"{REPS_URL}/{requests.utils.quote(ocd_id, safe='')}", params=query_params,
-                                timeout=constants.DEFAULT_TIMEOUT)
+    api_response = requests.get(f"{REPS_URL}/{requests.utils.quote(ocd_id, safe='')}",
+                                params=query_params, timeout=constants.DEFAULT_TIMEOUT)
     return api_response
