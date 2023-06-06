@@ -1,6 +1,5 @@
 """A collection of tests for the divisions module"""
 from google_civic_information_api import divisions
-import pytest
 import os
 
 TEST_API_KEY = os.environ["TEST_CIVIC_INFO_API_KEY"]
