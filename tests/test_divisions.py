@@ -1,6 +1,4 @@
 """A collection of tests for the divisions module"""
-from google_civic_information_api import divisions
-import pytest
 
 # Search Tests
 def test_search_proper_usage():
