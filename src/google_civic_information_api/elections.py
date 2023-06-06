@@ -26,7 +26,7 @@ def voter_info(api_key, address, election_id=None, official_only=False):
         raise ValueError("official_only must be True or False")
 
     if election_id:
-        query_params["electionID"] = election_id
+        query_params["electionId"] = election_id
 
     api_response = requests.get(VOTER_INFO_URL, params=query_params,
                                 timeout=constants.DEFAULT_TIMEOUT)
