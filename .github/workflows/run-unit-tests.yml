@@ -27,5 +27,7 @@ jobs:
           run: |
             python3 -m pip install .
         - name: Test with pytest
+          env:
+            TEST_CIVIC_INFO_API_KEY: ${{ secrets.TEST_CIVIC_INFO_API_KEY }}
           run: |
             pytest tests\
