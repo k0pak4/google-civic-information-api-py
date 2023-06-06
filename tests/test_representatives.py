@@ -1,4 +1,4 @@
-"""A collection of tests for the representatives modules"""
+"""A collection of tests for the representatives module"""
 from google_civic_information_api import representatives
 import pytest
 
