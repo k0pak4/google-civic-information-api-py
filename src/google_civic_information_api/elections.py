@@ -1,7 +1,7 @@
 """The elections module contains functions for the elections resource"""
 
 import requests
-import constants
+from google_civic_information_api import constants
 
 ELECTIONS_URL = f"{constants.BASE_URL}/elections"
 

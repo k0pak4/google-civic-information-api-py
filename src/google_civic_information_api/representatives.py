@@ -1,7 +1,7 @@
 """The representatives module contains functions for the representatives resource."""
 
 import requests
-import constants
+from google_civic_information_api import constants
 
 REPS_URL = f"{constants.BASE_URL}/representatives"
 
@@ -18,9 +18,12 @@ def representative_info_by_address(api_key, address, include_offices=True, level
 
     query_params = {"key": api_key, "address": address,
                     "includeOffices": include_offices}
+    # Check for paramater validity
+    if not isinstance(include_offices, bool):
+        raise ValueError("include_offices must be True or False")
     if levels and levels in VALID_LEVELS:
         query_params["levels"] = levels
-    elif roles and roles not in VALID_LEVELS:
+    elif levels and levels not in VALID_LEVELS:
         raise ValueError(f"levels must be one of {VALID_LEVELS}")
     if roles and roles in VALID_ROLES:
         query_params["roles"] = roles
@@ -36,9 +39,12 @@ def representative_info_by_division(api_key, ocd_id, recursive=True, levels=None
     """Queries the represenativeInfoByDivision endpoint with provided paramaeters"""
 
     query_params = {"key": api_key, "recursive": recursive}
+    # Check parameter validity
+    if not isinstance(recursive, bool):
+        raise ValueError("recursive must be True or False")
     if levels and levels in VALID_LEVELS:
         query_params["levels"] = levels
-    elif roles and roles not in VALID_LEVELS:
+    elif levels and levels not in VALID_LEVELS:
         raise ValueError(f"levels must be one of {VALID_LEVELS}")
     if roles and roles in VALID_ROLES:
         query_params["roles"] = roles

@@ -1,7 +1,7 @@
 """The divisions module contains functions for the divisions resource"""
 
 import requests
-import constants
+from google_civic_information_api import constants
 
 DIVISIONS_URL = f"{constants.BASE_URL}/divisions"
 
