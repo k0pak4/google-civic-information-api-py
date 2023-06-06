@@ -1,7 +1,7 @@
 """The elections module contains functions for the elections resource"""
 
 import requests
-import constants
+from google_civic_information_api import constants
 
 ELECTIONS_URL = f"{constants.BASE_URL}/elections"
 
@@ -21,8 +21,12 @@ def voter_info(api_key, address, election_id=None, official_only=False):
     """Queries the voterInfoQuery endpoint with the provided parameters"""
 
     query_params = {"key": api_key, "address": address, "officialOnly": official_only}
+    # Check for paramater validity
+    if not isinstance(official_only, bool):
+        raise ValueError("official_only must be True or False")
+
     if election_id:
-        query_params["electionID"] = election_id
+        query_params["electionId"] = election_id
 
     api_response = requests.get(VOTER_INFO_URL, params=query_params,
                                 timeout=constants.DEFAULT_TIMEOUT)
