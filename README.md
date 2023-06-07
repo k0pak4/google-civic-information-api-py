@@ -1,17 +1,24 @@
 # google-civic-information-api-py
 ![PyPI](https://img.shields.io/pypi/v/google-civic-information-api?color=blue&label=PyPi&style=plastic)
 ![GitHub](https://img.shields.io/github/license/k0pak4/google-civic-information-api-py?label=License&style=plastic)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/google-civic-information-api?label=Python)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/google-civic-information-api?label=Python?style=plastic)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/k0pak4/google-civic-information-api-py/run-unit-tests.yml?style=plastic)
 
 google-civic-information-api-py is a Python wrapper for [Google's Civic Information API](https://developers.google.com/civic-information/docs/v2).
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install google-civic-information-api.
+### Installing with Pip from Pypi
 
 ```bash
 pip install google-civic-information-api
+```
+
+### Installing with Pip Locally
+```bash
+git clone https://github.com/k0pak4/google-civic-information-api-py.git
+cd google-civic-information-api-py
+pip install .
 ```
 
 ## Usage
@@ -63,7 +70,7 @@ print(dc_results.json())
 Refer to the [Contributing Guide](https://github.com/k0pak4/google-civic-information-api-py/blob/main/CONTRIBUTING.md) for details on opening issues, pull requests, and development considerations.
 
 ## Security
-Refer to the [Security Policy](https://github.com/k0pak4/google-civic-information-api-py/blob/main/SECURITY.md) for details on supported versions, reporting vulnerabilities, and other security considerations.
+Refer to the [Security Policy](https://github.com/k0pak4/google-civic-information-api-py/blob/main/SECURITY.md) for details on supported versions, reporting vulnerabilities, and security considerations.
 
 ## License
 
