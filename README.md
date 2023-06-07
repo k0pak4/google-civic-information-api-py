@@ -1,7 +1,7 @@
 # google-civic-information-api-py
 ![PyPI](https://img.shields.io/pypi/v/google-civic-information-api?color=blue&label=PyPi&style=plastic)
 ![GitHub](https://img.shields.io/github/license/k0pak4/google-civic-information-api-py?label=License&style=plastic)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/google-civic-information-api?label=Python?style=plastic)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/google-civic-information-api?label=Python&style=plastic)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/k0pak4/google-civic-information-api-py/run-unit-tests.yml?style=plastic)
 
 google-civic-information-api-py is a Python wrapper for [Google's Civic Information API](https://developers.google.com/civic-information/docs/v2).
