@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "google-civic-information-api"
-version = "0.1.1"
+version = "1.0.0"
 description = "A python wrapper for Google's Civic Information API"
 readme = "README.md"
 authors = [{ name = "Matthew Mathur"}]
